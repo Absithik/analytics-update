@@ -1,0 +1,85 @@
+﻿
+> martech-ai@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 9.8s
+  Running TypeScript ...
+node.exe : Failed to 
+compile.
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Failed    
+ to compile.:Stri    
+ng) [], RemoteEx    
+ception
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+
+./src/app/industries/
+page.tsx:34:43
+Type error: Property 
+'id' does not exist 
+on type '{ slug: 
+string; name: 
+string; icon: 
+string; solution: 
+string; }'.
+
+[0m [90m 32 |[39m 
+                     
+   [33m<[39m[33mmo
+tion[39m[33m.[39md
+iv
+ [90m 33 |[39m     
+                     
+   layout
+[31m[1m>[22m[39m
+[90m 34 |[39m       
+                     
+ key[33m=[39m{indus
+try[33m.[39mid}
+ [90m    |[39m     
+                     
+                 
+[31m[1m^[22m[39m
+ [90m 35 |[39m     
+                     
+   
+initial[33m=[39m{{ 
+opacity[33m:[39m [
+35m0[39m[33m,[39m 
+y[33m:[39m 
+[35m20[39m }}
+ [90m 36 |[39m     
+                     
+   
+animate[33m=[39m{{ 
+opacity[33m:[39m [
+35m1[39m[33m,[39m 
+y[33m:[39m 
+[35m0[39m }}
+ [90m 37 |[39m     
+                     
+   transition[33m=[
+39m{{ 
+delay[33m:[39m i 
+[33m*[39m 
+[35m0.1[39m }}[0m
+Next.js build worker 
+exited with code: 1 
+and signal: null

@@ -1,0 +1,162 @@
+﻿
+> martech-ai@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 9.9s
+  Running TypeScript ...
+node.exe : Failed to 
+compile.
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Failed    
+ to compile.:Stri    
+ng) [], RemoteEx    
+ception
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+
+./src/app/industries/
+IndustriesPageClient.
+tsx:91:25
+Type error: Type '{ 
+initial: { scale: 
+number; rotate: 
+number; y: number; 
+filter: string; }; 
+hover: { scale: 
+number; rotate: 
+number; y: number; 
+filter: string; 
+transition: { type: 
+string; stiffness: 
+number; damping: 
+number; }; }; }' is 
+not assignable to 
+type 'Variants'.
+  Property 'hover' 
+is incompatible with 
+index signature.
+    Type '{ scale: 
+number; rotate: 
+number; y: number; 
+filter: string; 
+transition: { type: 
+string; stiffness: 
+number; damping: 
+number; }; }' is not 
+assignable to type 
+'Variant'.
+      Type '{ scale: 
+number; rotate: 
+number; y: number; 
+filter: string; 
+transition: { type: 
+string; stiffness: 
+number; damping: 
+number; }; }' is not 
+assignable to type 'T
+argetAndTransition'.
+        Type '{ 
+scale: number; 
+rotate: number; y: 
+number; filter: 
+string; transition: 
+{ type: string; 
+stiffness: number; 
+damping: number; }; 
+}' is not assignable 
+to type '{ 
+transition?: 
+Transition<any> | 
+undefined; 
+transitionEnd?: 
+ResolvedValues$1 | 
+undefined; }'.
+          Types of 
+property 
+'transition' are 
+incompatible.
+            Type '{ 
+type: string; 
+stiffness: number; 
+damping: number; }' 
+is not assignable to 
+type 
+'Transition<any> | 
+undefined'.
+              Type 
+'{ type: string; 
+stiffness: number; 
+damping: number; }' 
+is not assignable to 
+type 'TransitionWithV
+alueOverrides<any>'.
+                Type 
+'{ type: string; 
+stiffness: number; 
+damping: number; }' 
+is not assignable to 
+type 'ValueAnimationT
+ransition<any>'.
+                  
+Types of property 
+'type' are 
+incompatible.
+                    
+Type 'string' is not 
+assignable to type 'A
+nimationGeneratorType
+ | undefined'.
+
+[0m [90m 89 |[39m 
+                
+[33m>[39m
+ [90m 90 |[39m     
+                [33m
+<[39m[33mmotion[39
+m[33m.[39mdiv
+[31m[1m>[22m[39m
+[90m 91 |[39m       
+                  var
+iants[33m=[39m{icon
+Variants}
+ [90m    |[39m     
+                    
+[31m[1m^[22m[39m
+ [90m 92 |[39m     
+                    c
+lassName[33m=[39m[
+32m"w-16 h-16 
+bg-indigo-500 
+text-white 
+rounded-3xl flex 
+items-center 
+justify-center mb-8 
+shadow-lg 
+relative"[39m
+ [90m 93 |[39m     
+                
+[33m>[39m
+ [90m 94 |[39m     
+                    
+{[90m/* Inner glow 
+effect on hover 
+*/[39m}[0m
+Next.js build worker 
+exited with code: 1 
+and signal: null
