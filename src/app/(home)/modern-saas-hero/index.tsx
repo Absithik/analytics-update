@@ -51,11 +51,11 @@ const DashboardMockup = () => {
     return (
         <div className="w-full max-w-6xl mx-auto bg-white rounded-t-3xl border border-slate-200/80 shadow-2xl overflow-hidden flex relative group" style={{ height: '600px' }}>
             <img
-                src="/dashboard-mockup.png"
+                src="/assets/1.png"
                 alt="Analytics Dashboard Mockup"
                 className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.01]"
                 onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200';
+                    (e.target as HTMLImageElement).src = '/assets/1.png';
                 }}
             />
             {/* Inner stroke for premium feel */}

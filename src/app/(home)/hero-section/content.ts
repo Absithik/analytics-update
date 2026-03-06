@@ -1,5 +1,6 @@
 import { BarChart, Shield, Lock } from 'lucide-react';
 
+
 export const heroContent = {
   badge: {
     icon: BarChart,
@@ -14,7 +15,7 @@ export const heroContent = {
     { text: "Request Infrastructure Audit", variant: "primary" as const, href: "/contact" },
     { text: "View Solutions", variant: "outline" as const, href: "/services" }
   ],
-  dashboardImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000",
+  dashboardImage: "/assets/1.png",
   floatingIndicators: [
     { title: "100% Validated", subtitle: "Data Pipeline", icon: Shield, color: "emerald" },
     { title: "Compliance Ready", subtitle: "GDPR/CCPA", icon: Lock, color: "indigo" }

@@ -50,11 +50,11 @@ const ServicesList: React.FC = () => {
                             <div className={`relative ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
                                 <div className="aspect-square bg-slate-100 rounded-[3rem] overflow-hidden relative">
                                     <Image // Changed from img to Image
-                                        src={`https://images.unsplash.com/photo-${1550000000000 + i}?auto=format&fit=crop&q=80&w=800`}
+                                        src={service.image}
                                         alt={service.title}
                                         fill // Added fill prop
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Added sizes prop for performance
-                                        className="object-cover grayscale hover:grayscale-0 transition-all duration-700" // object-cover is now a class
+                                        className="object-contain grayscale hover:grayscale-0 transition-all duration-700" // object-cover is now a class
                                     />
                                 </div>
                                 <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 max-w-[200px]">

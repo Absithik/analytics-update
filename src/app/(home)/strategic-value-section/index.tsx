@@ -56,12 +56,12 @@ const StrategicValueSection: React.FC = () => {
 
                             {/* Replace this src with your analytics report image path */}
                             <img
-                                src="/analytics-report.png"
+                                src="/assets/2.png"
                                 alt="Strategic Analytics Report"
                                 className="w-full h-full object-cover object-left-top transition-transform duration-700 group-hover:scale-[1.02]"
                                 onError={(e) => {
                                     // Fallback placeholder
-                                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200';
+                                    (e.target as HTMLImageElement).src = '/assets/2.png';
                                 }}
                             />
 

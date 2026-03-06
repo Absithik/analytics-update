@@ -39,6 +39,7 @@ export const SERVICES = [
         id: 'digital-analytics',
         title: 'Digital Analytics Implementation',
         description: 'GA4, Adobe Analytics, and Tag Management systems engineered for precision.',
+        image: '/assets/1.png',
         icon: 'BarChart',
         impact: '99.9% Data Accuracy',
         tools: ['GA4', 'GTM Server-Side', 'Stape.io', 'BigQuery'],
@@ -69,6 +70,7 @@ export const SERVICES = [
         title: 'Data Strategy & Governance',
         description: 'Frameworks to ensure data accuracy, privacy compliance, and strategic alignment.',
         icon: 'ShieldCheck',
+        image: '/assets/2.png',
         impact: '100% Privacy Compliance',
         tools: ['OneTrust', 'Cookiebot', 'BigQuery ML'],
         whatWeDo: [
@@ -97,6 +99,7 @@ export const SERVICES = [
         title: 'BI & Visualization',
         description: 'Transforming technical data into intuitive dashboards for the C-suite.',
         icon: 'LineChart',
+        image: '/assets/3.png',
         impact: 'Real-time ROI Tracking',
         tools: ['Looker Studio', 'Tableau', 'Power BI'],
         whatWeDo: [
@@ -125,6 +128,7 @@ export const SERVICES = [
         title: 'Conversion Optimization',
         description: 'Data-driven experiments to maximize ROI from your existing traffic.',
         icon: 'Target',
+        image: '/assets/4.png',
         impact: '+25% Avg. CR Lift',
         tools: ['Optimizely', 'VWO', 'Hotjar', 'Microsoft Clarity'],
         whatWeDo: [
@@ -215,32 +219,200 @@ export const ABOUT_FAQ = [
     { question: "Do you provide ongoing support after implementation?", answer: "Yes, we offer continuous architectural optimization and governance support to ensure your analytics stack remains a robust 'Source of Truth'." }
 ];
 
-export const CASE_STUDIES = [
+export interface CaseStudy {
+    id: number;
+    slug: string;
+    title: string;
+    industry: string;
+    client: string;
+    impact: string;
+    image: string;
+    problem: string;
+    challenge: string;
+    solution: string;
+    tools: string[];
+    initialAudit?: string[];
+    businessImpacts?: { stat: string; label: string; subtext: string }[];
+    implementationSummary?: string[];
+    testimonial?: { text: string; author: string };
+}
+
+export const CASE_STUDIES: CaseStudy[] = [
+
     {
-        id: 1,
-        slug: 'global-retailer',
-        title: 'Global Retailer GA4 Migration',
+        id: 3,
+        slug: 'ga4-migration-d2c-brand',
+        title: 'GA4 Migration & Conversion Accuracy',
         industry: 'E-commerce',
-        client: 'RetailGiant Corp',
-        impact: '100% Data Accuracy',
-        image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
-        problem: 'Technical measurement audits should occur quarterly, not annually.',
-        challenge: 'Fragmented tracking sources across domains leading to significant data leakage.',
-        solution: 'Implemented server-side tagging and a centralized data layer architecture.',
-        tools: ['GA4', 'GTM Server-Side', 'BigQuery']
+        client: 'Fast-Growing D2C Brand',
+        impact: '+25% Attribution Accuracy',
+        image: '/assets/1.png',
+        problem: 'The client was still relying on Universal Analytics, which resulted in fragmented data, limited event-level insights, and unreliable attribution.',
+        challenge: 'Inconsistent event tracking meant campaign optimization decisions were largely assumption-driven rather than data-driven, obscuring the customer journey.',
+        solution: 'Led a complete migration to GA4 with a structured event taxonomy, an enhanced e-commerce data layer, and server-side tracking via GTM for accurate attribution.',
+        tools: ['GA4', 'GTM', 'Looker Studio'],
+        initialAudit: [
+            "Still relying on Universal Analytics leading to fragmented data.",
+            "Limited event-level insights and unreliable attribution.",
+            "Inconsistent event tracking."
+        ],
+        businessImpacts: [
+            { stat: "25%", label: "Accuracy", subtext: "Improvement in conversion attribution accuracy." },
+            { stat: "18%", label: "ROAS+", subtext: "Increase in Return on Ad Spend (ROAS)." },
+            { stat: "30%", label: "Visibility", subtext: "Improved visibility across checkout funnel stages." },
+            { stat: "35%", label: "Efficiency", subtext: "Reduced campaign optimization cycle time." }
+        ],
+        implementationSummary: [
+            "Mapped business objectives to event taxonomy",
+            "Created data layer specification",
+            "Configured enhanced e-commerce events",
+            "Deployed GTM tracking framework",
+            "Built Looker Studio funnel reports"
+        ],
+        testimonial: {
+            text: "Martechrise didn’t just migrate us to GA4 — they transformed how we understand performance marketing. We now have complete clarity across our funnel and far greater confidence in our attribution decisions.",
+            author: "Head of Growth, D2C E-commerce Brand"
+        }
     },
     {
-        id: 2,
-        slug: 'fintech-startup',
-        title: 'Fintech Conversion Optimization',
-        industry: 'Fintech',
-        client: 'SecurePay Solutions',
-        impact: '+24% ROI Increase',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-        problem: 'Marketing spend redirected to high-performing cohorts.',
-        challenge: 'High discrepancy between ad spend and purchase logs making ROI unclear.',
-        solution: 'Custom purchase schemas and LTV modeling combined with conversion API.',
-        tools: ['Adobe Analytics', 'Tealium', 'Segment']
+        id: 4,
+        slug: 'adobe-analytics-financial-services',
+        title: 'Adobe Analytics for Pre-Qualification Journey',
+        industry: 'Financial Services',
+        client: 'Leading Financial Institution',
+        impact: '32% Clarity Gain',
+        image: '/assets/2.png',
+        problem: 'The client lacked end-to-end visibility into their pre-qualification journey. Although traffic volumes were high, the business could not clearly identify where users were dropping off.',
+        challenge: 'Reporting was manual and time-consuming, limiting timely decision-making. The business could not identify which entry points were generating high-quality leads or how different marketing channels influenced form completion.',
+        solution: 'Designed and implemented a comprehensive digital analytics framework using Adobe Analytics. A structured variable and event taxonomy was created to track each step of the pre-qualification process.',
+        tools: ['Adobe Analytics', 'Adobe Launch', 'Analysis Workspace'],
+        initialAudit: [
+            "Lack of end-to-end visibility into pre-qualification journey.",
+            "Inability to clearly identify drop-off points or high-quality entry channels.",
+            "Manual and time-consuming reporting limiting decision-making."
+        ],
+        businessImpacts: [
+            { stat: "32%", label: "Clarity", subtext: "Improved clarity in form completion tracking." },
+            { stat: "60%", label: "Efficiency", subtext: "Reduction in manual reporting efforts." },
+            { stat: "Leads", label: "Quality", subtext: "Identified high-performing lead entry sources." },
+            { stat: "Execs", label: "Visibility", subtext: "Enabled executive-level decision-making visibility." }
+        ],
+        implementationSummary: [
+            "Designed a comprehensive digital analytics framework",
+            "Created structured variable and event taxonomy",
+            "Deployed tags with precise rule-based logic via Adobe Launch",
+            "Built custom Analysis Workspace dashboards",
+            "Delivered comprehensive metrics glossary"
+        ],
+        testimonial: {
+            text: "For the first time, we have end-to-end visibility into our pre-qualification journey. Martechrise brought structure, governance, and strategic insight into our analytics ecosystem.",
+            author: "Digital Transformation Lead, Financial Institution"
+        }
+    },
+    {
+        id: 5,
+        slug: 'white-label-analytics-partnership',
+        title: 'White-Label Analytics Partnership',
+        industry: 'Agency Partnership',
+        client: 'Global Marketing Agency',
+        impact: '40% Error Reduction',
+        image: '/assets/3.png',
+        problem: 'The agency needed a reliable analytics partner to support implementation, audits, and advanced tracking requirements across client accounts.',
+        challenge: 'Frequent tracking discrepancies, lack of standardized QA processes, and limited in-house analytics expertise were affecting client confidence and delivery timelines.',
+        solution: 'Partnered as a white-label analytics extension, auditing implementations, redesigning GA4 structures, standardizing frameworks, and introducing proactive QA.',
+        tools: ['GA4', 'GTM', 'Meta Pixel & CAPI'],
+        initialAudit: [
+            "Frequent tracking discrepancies across client accounts.",
+            "Lack of standardized QA processes affecting delivery.",
+            "Limited in-house analytics expertise reducing client confidence."
+        ],
+        businessImpacts: [
+            { stat: "40%", label: "Accuracy", subtext: "Reduction in tracking discrepancies." },
+            { stat: "25%", label: "Data Quality", subtext: "Improvement in campaign data accuracy." },
+            { stat: "100%", label: "Delivery", subtext: "On-time analytics implementation delivery." },
+            { stat: "Scale", label: "Growth", subtext: "Enabled agency to scale services without headcount increase." }
+        ],
+        implementationSummary: [
+            "Audited existing analytics implementations",
+            "Redesigned GA4 event structures",
+            "Standardized conversion tracking frameworks",
+            "Supported Meta Pixel validation & campaign governance",
+            "Introduced proactive QA and tracking processes"
+        ],
+        testimonial: {
+            text: "Martechrise operates like an extension of our internal team. Their precision, responsiveness, and technical expertise have strengthened our client reporting and elevated our analytics credibility.",
+            author: "Managing Director, Global Marketing Agency"
+        }
+    },
+    {
+        id: 6,
+        slug: 'analytics-audit-insurance',
+        title: 'Analytics Audit & Funnel Optimization',
+        industry: 'Insurance',
+        client: 'Digital-First Insurance Provider',
+        impact: 'Measurable Conversion Uplift',
+        image: '/assets/4.png',
+        problem: 'Despite high website traffic, the client faced low conversion rates and lacked clarity on user behavior across key funnel stages.',
+        challenge: 'Existing analytics implementation had gaps, resulting in missing events and inconsistent reporting across teams.',
+        solution: 'Conducted a comprehensive analytics audit, redesigned the event taxonomy to capture meaningful behavioral signals, and implemented enhanced GA4 funnel tracking.',
+        tools: ['GA4', 'GTM', 'Funnel Analysis'],
+        initialAudit: [
+            "Low conversion rates despite high website traffic.",
+            "Lack of clarity on user behavior across key funnel stages.",
+            "Missing events and inconsistent reporting across teams."
+        ],
+        businessImpacts: [
+            { stat: "100%", label: "Visibility", subtext: "Complete end-to-end visibility across quote-to-purchase journey." },
+            { stat: "Found", label: "Friction", subtext: "Identification of key friction points in checkout process." },
+            { stat: "Up", label: "Purchases", subtext: "Measurable uplift in completed policy purchases." },
+            { stat: "Clear", label: "Insights", subtext: "Improved device-level and channel-level conversion insights." }
+        ],
+        implementationSummary: [
+            "Conducted comprehensive analytics audit",
+            "Identified gaps in quote initiation and checkout",
+            "Redesigned event taxonomy for behavioral signals",
+            "Implemented enhanced GA4 funnel tracking",
+            "Established long-term analytics governance framework"
+        ],
+        testimonial: {
+            text: "The analytics audit conducted by Martechrise revealed insights we were completely missing. Their structured approach helped us identify and eliminate conversion friction points quickly.",
+            author: "Head of Digital Channels, Insurance Platform"
+        }
+    },
+    {
+        id: 7,
+        slug: 'analytics-setup-martech-startup',
+        title: 'End-to-End Analytics Setup',
+        industry: 'SaaS / Startup',
+        client: 'Martech Startup Launch',
+        impact: 'Data-Driven Growth',
+        image: '/assets/1.png',
+        problem: 'As a new entrant, the startup lacked any analytics infrastructure and needed a scalable solution to track user acquisition, product engagement, and lead generation.',
+        challenge: 'The leadership team required clear visibility into growth metrics without relying on complex manual reporting.',
+        solution: 'Designed and implemented a complete analytics setup from scratch using GA4, defining KPIs, event taxonomy, and creating real-time dashboards.',
+        tools: ['GA4', 'GTM', 'Dashboard Development'],
+        initialAudit: [
+            "Lacked any analytics infrastructure from day one.",
+            "Needed scalable solution for acquisition, engagement, and lead tracking.",
+            "Leadership required clear visibility without manual reporting."
+        ],
+        businessImpacts: [
+            { stat: "Live", label: "Tracking", subtext: "Established real-time growth performance tracking." },
+            { stat: "100%", label: "Decisions", subtext: "Enabled data-driven product roadmap decisions." },
+            { stat: "Clear", label: "Monitoring", subtext: "Improved acquisition channel performance monitoring." },
+            { stat: "Scale", label: "Foundation", subtext: "Built scalable analytics foundation ready for expansion." }
+        ],
+        implementationSummary: [
+            "Defined key business KPIs from scratch",
+            "Created event taxonomy aligned with product usage",
+            "Deployed future-ready tracking via Google Tag Manager",
+            "Developed real-time leadership dashboards",
+            "Strengthened investor reporting confidence"
+        ],
+        testimonial: {
+            text: "Martechrise helped us build a scalable analytics foundation from day one. Their strategic input has directly influenced our product and growth decisions.",
+            author: "Co-Founder & CEO, Martech Startup"
+        }
     }
 ];
 
@@ -258,7 +430,7 @@ export const BLOGS = [
         date: 'Oct 24, 2023',
         author: 'Lead Architect',
         readTime: '12 min read',
-        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=800',
+        image: '/assets/1.png',
         content: 'Traditional attribution models are failing in the post-cookie world. Learn how server-side tagging provides a more resilient foundation for measurement.'
     },
     {
@@ -269,7 +441,7 @@ export const BLOGS = [
         date: 'Nov 02, 2023',
         author: 'Data Strategist',
         readTime: '08 min read',
-        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
+        image: '/assets/2.png',
         content: 'In the modern privacy landscape, client-side tracking is increasingly unreliable. Browser protections and ad blockers frequently truncate data packets.'
     }
 ];

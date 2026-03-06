@@ -48,10 +48,10 @@ const EcommercePageClient: React.FC = () => {
                         <div className="relative">
                             <div className="aspect-square bg-white rounded-[4rem] shadow-2xl overflow-hidden border border-slate-100 relative group">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1200"
+                                    src="/assets/2.png"
                                     alt="Ecommerce Analytics"
                                     fill
-                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                                    className="object-contain grayscale group-hover:grayscale-0 transition-all duration-1000"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             </div>
@@ -188,7 +188,7 @@ const EcommercePageClient: React.FC = () => {
                                 <div className="relative">
                                     <div className="absolute inset-0 bg-indigo-500 rounded-3xl blur-2xl opacity-20 -rotate-6"></div>
                                     <Image
-                                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                                        src="/assets/3.png"
                                         alt="Success Case"
                                         width={800}
                                         height={600}

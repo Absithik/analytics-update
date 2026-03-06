@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { heroContent } from './content';
 import { heroAnimations } from './animation';
+import Image from 'next/image';
 
 const HeroSection: React.FC = () => {
     return (
@@ -59,12 +60,13 @@ const HeroSection: React.FC = () => {
                     className="mt-10 relative max-w-6xl mx-auto"
                 >
                     <div className="aspect-[21/9] rounded-2xl overflow-hidden border border-slate-200 shadow-2xl relative">
-                        <img
+                        <Image
                             src={heroContent.dashboardImage}
                             alt="Analytical Dashboard"
+                            fill
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-slate-900/5"></div>
+                        {/* <div className="absolute inset-0 bg-slate-900/5"></div> */}
                     </div>
 
                     {/* Floating Indicators */}

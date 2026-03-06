@@ -102,7 +102,7 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
                             <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100">
                                 <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest mb-6">Initial Status Audit</h4>
                                 <div className="space-y-4">
-                                    {["Fragmented tracking sources across domains.", "High discrepancy between ad spend and purchase logs.", "Manual reporting taking 10+ hours/week."].map((p, i) => (
+                                    {(study.initialAudit || ["Fragmented tracking sources across domains.", "High discrepancy between ad spend and purchase logs.", "Manual reporting taking 10+ hours/week."]).map((p, i) => (
                                         <div key={i} className="flex gap-3 text-sm font-bold text-slate-600">
                                             <div className="w-1.5 h-1.5 bg-rose-500 rounded-full mt-1.5 flex-shrink-0"></div>
                                             <span>{p}</span>
@@ -136,17 +136,38 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
                                 <Globe className="text-emerald-600" /> Business Impact
                             </h3>
                             <div className="grid sm:grid-cols-2 gap-8">
-                                <div className="p-8 bg-emerald-50 rounded-3xl border border-emerald-100">
-                                    <div className="text-4xl font-black text-emerald-600 mb-2">100%</div>
-                                    <div className="text-sm font-bold text-slate-900 uppercase tracking-tight">Data Reconciliation</div>
-                                    <p className="text-xs text-slate-500 mt-2">Zero difference between analytics and backend logs.</p>
-                                </div>
-                                <div className="p-8 bg-indigo-50 rounded-3xl border border-indigo-100">
-                                    <div className="text-4xl font-black text-indigo-600 mb-2">ROI+</div>
-                                    <div className="text-sm font-bold text-slate-900 uppercase tracking-tight">Strategy Clarity</div>
-                                    <p className="text-xs text-slate-500 mt-2">Marketing spend redirected to high-performing cohorts.</p>
-                                </div>
+                                {study.businessImpacts ? study.businessImpacts.map((impact, i) => (
+                                    <div key={i} className={`p-8 rounded-3xl border ${i % 2 === 0 ? 'bg-emerald-50 border-emerald-100' : 'bg-indigo-50 border-indigo-100'}`}>
+                                        <div className={`text-4xl font-black mb-2 ${i % 2 === 0 ? 'text-emerald-600' : 'text-indigo-600'}`}>{impact.stat}</div>
+                                        <div className="text-sm font-bold text-slate-900 uppercase tracking-tight">{impact.label}</div>
+                                        <p className="text-xs text-slate-500 mt-2">{impact.subtext}</p>
+                                    </div>
+                                )) : (
+                                    <>
+                                        <div className="p-8 bg-emerald-50 rounded-3xl border border-emerald-100">
+                                            <div className="text-4xl font-black text-emerald-600 mb-2">100%</div>
+                                            <div className="text-sm font-bold text-slate-900 uppercase tracking-tight">Data Reconciliation</div>
+                                            <p className="text-xs text-slate-500 mt-2">Zero difference between analytics and backend logs.</p>
+                                        </div>
+                                        <div className="p-8 bg-indigo-50 rounded-3xl border border-indigo-100">
+                                            <div className="text-4xl font-black text-indigo-600 mb-2">ROI+</div>
+                                            <div className="text-sm font-bold text-slate-900 uppercase tracking-tight">Strategy Clarity</div>
+                                            <p className="text-xs text-slate-500 mt-2">Marketing spend redirected to high-performing cohorts.</p>
+                                        </div>
+                                    </>
+                                )}
                             </div>
+
+                            {study.testimonial && (
+                                <div className="mt-12 p-8 bg-slate-900 rounded-[2rem] text-white">
+                                    <p className="text-lg italic font-medium leading-relaxed mb-6">
+                                        &quot;{study.testimonial.text}&quot;
+                                    </p>
+                                    <div className="text-sm font-bold text-slate-400">
+                                        — {study.testimonial.author}
+                                    </div>
+                                </div>
+                            )}
                         </section>
                     </div>
 
@@ -155,12 +176,12 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
                         <div className="p-12 bg-slate-50 rounded-[3rem] sticky top-32">
                             <h4 className="text-lg font-bold text-slate-900 mb-8">Implementation Summary</h4>
                             <div className="space-y-6 mb-12">
-                                {[
+                                {(study.implementationSummary || [
                                     "Blueprint & Schema Design",
                                     "Server-Side Tagging Deployment",
                                     "BigQuery Data Pipeline",
                                     "Automated QA & Monitoring"
-                                ].map((item, i) => (
+                                ]).map((item, i) => (
                                     <div key={i} className="flex gap-4 items-center text-sm font-bold text-slate-700">
                                         <CheckCircle2 size={18} className="text-indigo-600" />
                                         {item}
