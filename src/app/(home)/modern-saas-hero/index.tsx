@@ -49,148 +49,17 @@ const FloatingIcon = ({
 
 const DashboardMockup = () => {
     return (
-        <div className="w-full max-w-6xl mx-auto bg-white rounded-t-3xl border border-slate-200 shadow-2xl overflow-hidden flex" style={{ height: '600px' }}>
-            {/* Sidebar */}
-            <div className="w-64 border-r border-slate-100 p-6 flex flex-col gap-6 bg-slate-50/50">
-                <div className="flex items-center gap-2 font-bold text-xl text-blue-600 mb-4">
-                    <PieChart className="text-blue-600 fill-blue-600" size={24} />
-                    <span className="text-slate-900">Alytics</span>
-                </div>
-
-                <div className="relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
-                    <input type="text" placeholder="Search" className="w-full bg-white border border-slate-200 rounded-lg pl-9 pr-4 py-2 text-sm text-slate-600 outline-none focus:border-blue-500" />
-                </div>
-
-                <nav className="flex flex-col gap-1 flex-1">
-                    <div className="flex items-center gap-3 px-3 py-2 text-blue-600 bg-blue-50 rounded-lg font-medium text-sm">
-                        <LayoutDashboard size={18} /> Dashboard
-                    </div>
-                    <div className="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg font-medium text-sm">
-                        <Users size={18} /> Customers
-                    </div>
-                    <div className="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg font-medium text-sm">
-                        <BarChart3 size={18} /> All reports
-                    </div>
-                    <div className="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg font-medium text-sm">
-                        <Map size={18} /> Geography
-                    </div>
-                    <div className="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg font-medium text-sm">
-                        <MessageCircle size={18} /> Conversations
-                    </div>
-                    <div className="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg font-medium text-sm">
-                        <Briefcase size={18} /> Deals
-                    </div>
-                    <div className="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg font-medium text-sm mt-auto">
-                        <Download size={18} /> Export
-                    </div>
-                </nav>
-            </div>
-
-            {/* Main Content */}
-            <div className="flex-1 p-8 bg-[#fafafa]">
-                <div className="grid grid-cols-3 gap-6 mb-6">
-                    {/* Revenues Card */}
-                    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                        <div className="text-slate-600 font-medium mb-4">Revenues</div>
-                        <div className="text-4xl font-bold text-slate-900 mb-2 flex items-center gap-2">
-                            15% <ArrowUpRight size={24} className="text-blue-500" />
-                        </div>
-                        <div className="text-sm text-slate-500 mb-6">Increase compared to last week</div>
-                        <div className="text-blue-600 text-sm font-medium flex items-center gap-1 cursor-default">
-                            Revenues report &rarr;
-                        </div>
-                    </div>
-                    {/* Lost Deals Card */}
-                    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                        <div className="text-slate-600 font-medium mb-4">Lost deals</div>
-                        <div className="text-4xl font-bold text-slate-900 mb-2">4%</div>
-                        <div className="text-sm text-slate-500 mb-6">You closed 96 out of 100 deals</div>
-                        <div className="text-blue-600 text-sm font-medium flex items-center gap-1 cursor-default">
-                            All deals &rarr;
-                        </div>
-                    </div>
-                    {/* Quarter Goal Card */}
-                    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center relative">
-                        <div className="text-slate-600 font-medium mb-4 absolute top-6 left-6">Quarter goal</div>
-
-                        <div className="relative w-32 h-16 mt-8 mb-4 overflow-hidden">
-                            <div className="absolute top-0 left-0 w-32 h-32 border-8 border-slate-100 rounded-full" />
-                            {/* Dummy SVG Arch */}
-                            <svg className="absolute top-0 left-0 w-32 h-32 transform -rotate-90" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="46" fill="transparent" stroke="#2563eb" strokeWidth="8" strokeDasharray="289" strokeDashoffset="50" strokeLinecap="round" />
-                            </svg>
-                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-3xl font-bold text-slate-900">84%</div>
-                        </div>
-
-                        <div className="text-blue-600 text-sm font-medium flex items-center gap-1 cursor-default mt-auto">
-                            All goals &rarr;
-                        </div>
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-6">
-                    {/* Customers List */}
-                    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                        <div className="flex items-center justify-between mb-6">
-                            <div className="text-slate-900 font-bold">Customers</div>
-                            <div className="text-slate-500 text-sm flex items-center gap-1 cursor-default">
-                                Sort by Newest <TrendingUp size={14} />
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-4">
-                            <div className="flex items-center justify-between group">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
-                                        <img src="https://i.pravatar.cc/150?u=1" alt="Chris Friedkly - Example User Profile" />
-                                    </div>
-                                    <div>
-                                        <div className="font-semibold text-sm text-slate-900">Chris Friedkly</div>
-                                        <div className="text-xs text-slate-500">Supermarket Villanova</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex items-center justify-between bg-blue-50/50 p-2 -mx-2 rounded-lg border border-blue-100">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
-                                        <img src="https://i.pravatar.cc/150?u=2" alt="Maggie Johnson - Example Customer Profile" />
-                                    </div>
-                                    <div>
-                                        <div className="font-semibold text-sm text-slate-900">Maggie Johnson</div>
-                                        <div className="text-xs text-slate-500">Oasis Organic Inc.</div>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-4 text-blue-500 mr-2">
-                                    <MessageCircle size={16} className="cursor-default" />
-                                    <Star size={16} className="cursor-default" />
-                                    <Edit2 size={16} className="cursor-default" />
-                                    <div className="w-px h-4 bg-slate-200" />
-                                    <MoreHorizontal size={16} className="cursor-default" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Growth Chart (Simplified Line visual) */}
-                    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
-                        <div className="flex items-center justify-between mb-6">
-                            <div className="text-slate-900 font-bold">Growth</div>
-                            <div className="text-slate-500 text-sm flex items-center gap-1 cursor-default">
-                                Yearly <TrendingUp size={14} />
-                            </div>
-                        </div>
-                        {/* Placeholder Chart Graphic */}
-                        <div className="flex-1 flex items-end justify-between relative pt-8">
-                            <svg viewBox="0 0 400 150" className="w-full h-full text-blue-100 fill-current overflow-visible">
-                                <path d="M0,150 L0,120 C50,110 80,140 120,90 C160,40 190,110 240,80 C290,50 340,30 400,20 L400,150 Z" opacity="0.5" />
-                                <path d="M0,120 C50,110 80,140 120,90 C160,40 190,110 240,80 C290,50 340,30 400,20" fill="transparent" stroke="#3b82f6" strokeWidth="3" />
-                            </svg>
-                            <div className="absolute left-0 bottom-0 h-full flex flex-col justify-between text-[10px] text-slate-400">
-                                <span>100k</span><span>50k</span><span>20k</span><span>10k</span><span>0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="w-full max-w-6xl mx-auto bg-white rounded-t-3xl border border-slate-200/80 shadow-2xl overflow-hidden flex relative group" style={{ height: '600px' }}>
+            <img
+                src="/dashboard-mockup.png"
+                alt="Analytics Dashboard Mockup"
+                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.01]"
+                onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200';
+                }}
+            />
+            {/* Inner stroke for premium feel */}
+            <div className="absolute inset-0 ring-1 ring-inset ring-slate-900/10 pointer-events-none rounded-t-3xl"></div>
         </div>
     );
 };

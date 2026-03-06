@@ -6,32 +6,70 @@ import { strategicValueContent } from './content';
 
 const StrategicValueSection: React.FC = () => {
     return (
-        <section className="py-32">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{strategicValueContent.title}</h2>
-                    <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-                        {strategicValueContent.description}
-                    </p>
-                </div>
+        <section className="py-24 md:py-32 bg-slate-50 relative overflow-hidden">
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {strategicValueContent.propositions.map((prop, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.1 }}
-                            className="p-8 rounded-2xl border border-slate-100 bg-white hover:border-indigo-100 hover:shadow-xl transition-all group"
-                        >
-                            <div className="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all">
-                                <prop.icon size={28} />
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-4">{prop.title}</h3>
-                            <p className="text-slate-500 text-sm leading-relaxed">{prop.desc}</p>
-                        </motion.div>
-                    ))}
+                    {/* Left Content Column */}
+                    <div>
+                        <div className="mb-12">
+                            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                                {strategicValueContent.title}
+                            </h2>
+                            <p className="text-slate-500 text-lg leading-relaxed max-w-xl">
+                                {strategicValueContent.description}
+                            </p>
+                        </div>
+
+                        <div className="grid sm:grid-cols-2 gap-6">
+                            {strategicValueContent.propositions.map((prop, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1 }}
+                                    className="p-6 md:p-8 rounded-2xl bg-white border border-slate-100 hover:border-indigo-100 hover:shadow-xl transition-all group"
+                                >
+                                    <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                                        <prop.icon size={24} />
+                                    </div>
+                                    <h3 className="text-lg font-bold text-slate-900 mb-3">{prop.title}</h3>
+                                    <p className="text-slate-500 text-sm leading-relaxed">{prop.desc}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Right Image Placeholder Column */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="relative w-full h-full lg:min-h-[600px] rounded-3xl mt-12 lg:mt-0"
+                    >
+                        {/* Decorative glow behind the image */}
+                        <div className="absolute inset-0 bg-indigo-400 rounded-3xl blur-[80px] opacity-20 translate-x-4 translate-y-4"></div>
+
+                        <div className="relative w-full h-full aspect-[4/3] lg:aspect-auto rounded-3xl border border-slate-200/60 shadow-2xl bg-white overflow-hidden flex items-center justify-center group">
+
+                            {/* Replace this src with your analytics report image path */}
+                            <img
+                                src="/analytics-report.png"
+                                alt="Strategic Analytics Report"
+                                className="w-full h-full object-cover object-left-top transition-transform duration-700 group-hover:scale-[1.02]"
+                                onError={(e) => {
+                                    // Fallback placeholder
+                                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200';
+                                }}
+                            />
+
+                            {/* Inner stroke for premium glass effect feel */}
+                            <div className="absolute inset-0 ring-1 ring-inset ring-slate-900/10 rounded-3xl pointer-events-none"></div>
+                        </div>
+                    </motion.div>
+
                 </div>
             </div>
         </section>
