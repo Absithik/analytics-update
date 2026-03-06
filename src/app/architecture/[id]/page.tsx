@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { SERVICES } from '@/constants/services';
+import { SERVICES } from '@/constants';
 import TechnicalBlueprintClient from './TechnicalBlueprintClient';
 
 interface Props {

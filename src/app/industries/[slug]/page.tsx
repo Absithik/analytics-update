@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { INDUSTRIES } from '@/constants/industries';
+import { INDUSTRIES } from '@/constants';
 import { CASE_STUDIES } from '@/constants';
 import IndustryDetailClient from './IndustryDetailClient';
 

@@ -1,18 +1,18 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { CheckCircle2, Slack, Calendar, Github, FolderKanban, Search, Lightbulb, FileText, MousePointer2 } from 'lucide-react';
 import Button from '@/components/ui/Button';
 
 const ProcessSection: React.FC = () => {
     // Animation Variants
-    const fadeUp = {
+    const fadeUp: Variants = {
         hidden: { opacity: 0, y: 40 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
     };
 
-    const staggerContainer = {
+    const staggerContainer: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -22,22 +22,22 @@ const ProcessSection: React.FC = () => {
         }
     };
 
-    const listItemVariant = {
+    const listItemVariant: Variants = {
         hidden: { opacity: 0, x: -20 },
         visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" } }
     };
 
-    const cardVariant = {
+    const cardVariant: Variants = {
         hidden: { opacity: 0, scale: 0.9, y: 20 },
         visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
     };
 
-    const pathVariant = {
+    const pathVariant: Variants = {
         hidden: { pathLength: 0, opacity: 0 },
         visible: { pathLength: 1, opacity: 1, transition: { duration: 1.2, ease: "easeInOut" } }
     };
 
-    const nodeVariant = {
+    const nodeVariant: Variants = {
         hidden: { opacity: 0, scale: 0.8 },
         visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" } }
     };
