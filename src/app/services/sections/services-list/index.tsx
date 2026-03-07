@@ -37,9 +37,14 @@ const ServicesList: React.FC = () => {
 
                                 <div className="flex items-center gap-6">
                                     <Link href={`/services/${service.id}`}>
-                                        <Button variant="primary" className="px-6 cursor-pointer flex items-center gap-2 group">
-                                            Architecture Detail
-                                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                                        <Button
+                                            variant="primary"
+                                            className="px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 cursor-pointer flex items-center gap-3 group animate-bounce hover:animate-none hover:scale-105 active:scale-95 transition-all duration-300"
+                                        >
+                                            <span className="font-bold tracking-wide">Architecture Detail</span>
+                                            <div className="bg-white/20 p-2 rounded-full group-hover:bg-white/30 transition-colors">
+                                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
+                                            </div>
                                         </Button>
                                     </Link>
                                     <div className="text-sm font-black text-indigo-600 uppercase tracking-widest flex items-center gap-2">

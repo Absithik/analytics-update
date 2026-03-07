@@ -26,15 +26,15 @@ const Navbar: React.FC = () => {
                 {
                     name: 'Our Services',
                     path: '/services',
-                    subDropdown: [
-                        { name: 'Digital Analytics', path: '/services/digital-analytics' },
-                        { name: 'Data Strategy', path: '/services/data-strategy' },
-                        { name: 'BI & Visualization', path: '/services/bi-visualization' },
-                        { name: 'Optimization', path: '/services/optimization' }
-                    ]
+                    // subDropdown: [
+                    //     { name: 'Digital Analytics', path: '/services/digital-analytics' },
+                    //     { name: 'Data Strategy', path: '/services/data-strategy' },
+                    //     { name: 'BI & Visualization', path: '/services/bi-visualization' },
+                    //     { name: 'Optimization', path: '/services/optimization' }
+                    // ]
                 },
                 {
-                    name: 'Architecture Detail',
+                    name: 'Blueprints Library',
                     path: '#',
                     subDropdown: [
                         { name: 'Digital Analytics', path: '/architecture/digital-analytics' },
