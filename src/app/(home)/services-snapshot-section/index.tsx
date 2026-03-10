@@ -60,7 +60,7 @@ const ServicesSnapshotSection: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
                         {/* 1. Multi-Device Accessibility */}
-                        <div className="lg:col-span-2 rounded-[32px] border border-slate-200 p-10 flex flex-col md:flex-row gap-8 items-center bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden relative group hover:border-slate-300 transition-colors">
+                        <div className="lg:col-span-2 rounded-[32px] border border-slate-200 p-6 md:p-10 flex flex-col md:flex-row gap-8 items-center bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden relative group hover:border-slate-300 transition-colors">
                             {/* Texture background */}
                             <div className="absolute top-0 left-0 w-64 h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:12px_12px] opacity-40 ml-4 pointer-events-none" />
 
@@ -119,7 +119,7 @@ const ServicesSnapshotSection: React.FC = () => {
                         </div>
 
                         {/* 2. AI-Powered Learning (Video Mockup) */}
-                        <div className="rounded-[32px] border border-slate-200 p-10 flex flex-col bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden hover:border-slate-300 transition-colors">
+                        <div className="rounded-[32px] border border-slate-200 p-6 md:p-10 flex flex-col bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden hover:border-slate-300 transition-colors">
                             <h3 className="text-2xl font-bold text-slate-900 mb-3 tracking-tight">AI-Assisted Guidance</h3>
                             <p className="text-slate-500 mb-8 max-w-xs text-sm">
                                 Get personalized recommendations and automated strategy consultations.
@@ -159,7 +159,7 @@ const ServicesSnapshotSection: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                         {/* 3. Progress Tracking */}
-                        <div className="rounded-[32px] border border-slate-200 p-8 pt-10 flex flex-col bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-slate-300 transition-colors">
+                        <div className="rounded-[32px] border border-slate-200 p-6 pt-8 md:p-8 md:pt-10 flex flex-col bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-slate-300 transition-colors">
                             <h3 className="text-xl font-bold text-slate-900 mb-3">Smart Data Tracking</h3>
                             <p className="text-slate-500 text-sm mb-8 h-10">
                                 Monitor ROI and KPIs with in-depth custom reports.
@@ -189,7 +189,7 @@ const ServicesSnapshotSection: React.FC = () => {
                         </div>
 
                         {/* 4. Gamification */}
-                        <div className="rounded-[32px] border border-slate-200 p-8 pt-10 flex flex-col bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-slate-300 transition-colors">
+                        <div className="rounded-[32px] border border-slate-200 p-6 pt-8 md:p-8 md:pt-10 flex flex-col bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-slate-300 transition-colors">
                             <h3 className="text-xl font-bold text-slate-900 mb-3">Goal Achievements</h3>
                             <p className="text-slate-500 text-sm mb-8 h-10">
                                 Keep teams excited with clear target tracking and milestones!
@@ -216,7 +216,7 @@ const ServicesSnapshotSection: React.FC = () => {
                         </div>
 
                         {/* 5. AI Search & Recommendations */}
-                        <div className="rounded-[32px] border border-slate-200 p-8 pt-10 flex flex-col bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-slate-300 transition-colors">
+                        <div className="rounded-[32px] border border-slate-200 p-6 pt-8 md:p-8 md:pt-10 flex flex-col bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-slate-300 transition-colors">
                             <h3 className="text-xl font-bold text-slate-900 mb-3">AI-Powered Insights</h3>
                             <p className="text-slate-500 text-sm mb-8 h-10">
                                 Get automated trend spotting and anomaly detection instantly.

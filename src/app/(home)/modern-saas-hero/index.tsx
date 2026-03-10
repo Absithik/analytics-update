@@ -49,7 +49,7 @@ const FloatingIcon = ({
 
 const DashboardMockup = () => {
     return (
-        <div className="w-full max-w-6xl mx-auto bg-white rounded-t-3xl border border-slate-200/80 shadow-2xl overflow-hidden flex relative group" style={{ height: '600px' }}>
+        <div className="w-full max-w-6xl mx-auto bg-white rounded-t-3xl border border-slate-200/80 shadow-2xl overflow-hidden flex relative group h-[280px] sm:h-[400px] lg:h-[600px]">
             <img
                 src="/assets/1.png"
                 alt="Analytics Dashboard Mockup"
@@ -125,7 +125,7 @@ const ModernSaaSHero: React.FC = () => {
                     </div>
 
                     {/* Headline - Primary H1 */}
-                    <h1 className="text-6xl md:text-[80px] font-black text-slate-900 tracking-[-0.03em] leading-[1.05] mb-6 max-w-4xl mx-auto">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-black text-slate-900 tracking-[-0.03em] leading-[1.05] mb-6 max-w-4xl mx-auto text-balance">
                         Enterprise Digital Analytics <br className="hidden md:block" /> &amp; Data Strategy
                     </h1>
 

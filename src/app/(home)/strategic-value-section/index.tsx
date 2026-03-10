@@ -13,15 +13,15 @@ const StrategicValueSection: React.FC = () => {
                     {/* Left Content Column */}
                     <div>
                         <div className="mb-12">
-                            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight text-balance">
                                 {strategicValueContent.title}
                             </h2>
-                            <p className="text-slate-500 text-lg leading-relaxed max-w-xl">
+                            <p className="text-slate-500 text-base md:text-lg leading-relaxed max-w-xl">
                                 {strategicValueContent.description}
                             </p>
                         </div>
 
-                        <div className="grid sm:grid-cols-2 gap-6">
+                        <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                             {strategicValueContent.propositions.map((prop, i) => (
                                 <motion.div
                                     key={i}
@@ -29,12 +29,12 @@ const StrategicValueSection: React.FC = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="p-6 md:p-8 rounded-2xl bg-white border border-slate-100 hover:border-indigo-100 hover:shadow-xl transition-all group"
+                                    className="p-5 md:p-8 rounded-2xl bg-white border border-slate-100 hover:border-indigo-100 hover:shadow-xl transition-all group"
                                 >
                                     <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-all">
                                         <prop.icon size={24} />
                                     </div>
-                                    <h3 className="text-lg font-bold text-slate-900 mb-3">{prop.title}</h3>
+                                    <h3 className="text-lg font-bold text-slate-900 mb-2 md:mb-3">{prop.title}</h3>
                                     <p className="text-slate-500 text-sm leading-relaxed">{prop.desc}</p>
                                 </motion.div>
                             ))}
@@ -47,18 +47,18 @@ const StrategicValueSection: React.FC = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="relative w-full h-full lg:min-h-[600px] rounded-3xl mt-12 lg:mt-0"
+                        className="relative w-full h-[300px] sm:h-[400px] lg:h-full lg:min-h-[600px] rounded-3xl mt-12 lg:mt-0"
                     >
                         {/* Decorative glow behind the image */}
                         <div className="absolute inset-0 bg-indigo-400 rounded-3xl blur-[80px] opacity-20 translate-x-4 translate-y-4"></div>
 
-                        <div className="relative w-full h-full aspect-[4/3] lg:aspect-auto rounded-3xl border border-slate-200/60 shadow-2xl bg-white overflow-hidden flex items-center justify-center group">
+                        <div className="relative w-full h-full rounded-3xl border border-slate-200/60 shadow-2xl bg-white overflow-hidden flex items-center justify-center group">
 
                             {/* Replace this src with your analytics report image path */}
                             <img
                                 src="/assets/2.png"
                                 alt="Strategic Analytics Report"
-                                className="w-full h-full object-cover object-left-top transition-transform duration-700 group-hover:scale-[1.02]"
+                                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
                                 onError={(e) => {
                                     // Fallback placeholder
                                     (e.target as HTMLImageElement).src = '/assets/2.png';

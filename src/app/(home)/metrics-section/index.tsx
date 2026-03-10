@@ -8,7 +8,7 @@ const MetricsSection: React.FC = () => {
     return (
         <section className="py-32">
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
                     {METRICS.map((m, i) => (
                         <MetricCard
                             key={i}

@@ -87,42 +87,34 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
                 {/* Breakdown Grid */}
                 <div className="grid lg:grid-cols-12 gap-20">
                     <div className="lg:col-span-7 space-y-24">
+                        {/* Client Overview */}
+                        <section>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                                <Globe className="text-emerald-500" /> Client Overview
+                            </h3>
+                            <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10">
+                                {study.clientOverview}
+                            </p>
+                        </section>
+
                         {/* The Challenge */}
                         <section>
                             <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-                                <AlertCircle className="text-rose-500" /> The Analytics Challenge
+                                <AlertCircle className="text-rose-500" /> Business Challenge
                             </h3>
-                            <p className="text-xl text-slate-600 leading-relaxed font-medium mb-10">
-                                {study.challenge}
+                            <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10">
+                                {study.businessChallenge}
                             </p>
-                            <h3 className="text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">Architectural Solutions</h3>
-                            <p className="text-lg text-slate-600 leading-relaxed mb-8 font-medium">
-                                Moving tracking logic to a centralized server allows for PII redaction, data enrichment, and improved page load performance. By controlling the stream, enterprises can ensure that only compliant, cleaned data reaches downstream vendors like Google and Facebook.
-                            </p>
-                            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100">
-                                <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest mb-6">Initial Status Audit</h4>
-                                <div className="space-y-4">
-                                    {(study.initialAudit || ["Fragmented tracking sources across domains.", "High discrepancy between ad spend and purchase logs.", "Manual reporting taking 10+ hours/week."]).map((p, i) => (
-                                        <div key={i} className="flex gap-3 text-sm font-bold text-slate-600">
-                                            <div className="w-1.5 h-1.5 bg-rose-500 rounded-full mt-1.5 flex-shrink-0"></div>
-                                            <span>{p}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
                         </section>
 
-                        {/* The Solution */}
+                        {/* Tools Used */}
                         <section>
                             <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-                                <Target className="text-indigo-600" /> Technical Solution
+                                <Target className="text-indigo-600" /> Tools Used
                             </h3>
-                            <p className="text-xl text-slate-600 leading-relaxed font-medium mb-10">
-                                {study.solution}
-                            </p>
-                            <div className="grid sm:grid-cols-2 gap-4">
+                            <div className="flex flex-wrap gap-4">
                                 {study.tools.map(tool => (
-                                    <div key={tool} className="flex items-center gap-4 p-6 border border-slate-100 rounded-2xl bg-white shadow-sm font-black text-xs uppercase tracking-widest text-slate-600">
+                                    <div key={tool} className="flex items-center gap-3 px-5 py-3 border border-slate-200 rounded-xl bg-slate-50 font-bold text-xs uppercase tracking-widest text-slate-700 shadow-sm hover:border-indigo-200 transition-colors">
                                         <Database size={16} className="text-indigo-600" />
                                         {tool}
                                     </div>
@@ -130,40 +122,51 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
                             </div>
                         </section>
 
+                        {/* The Solution */}
+                        <section>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                                <ShieldCheck className="text-indigo-600" /> MartechRise Solution
+                            </h3>
+                            <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10 whitespace-pre-wrap">
+                                {study.martechRiseSolution}
+                            </p>
+                        </section>
+
+                        {/* Outcome */}
+                        <section>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                                <TrendingUp className="text-emerald-600" /> Outcome
+                            </h3>
+                            <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10">
+                                {study.outcome}
+                            </p>
+                        </section>
+
                         {/* Business Impact */}
                         <section>
                             <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-                                <Globe className="text-emerald-600" /> Business Impact
+                                <CheckCircle2 className="text-indigo-600" /> Impact
                             </h3>
-                            <div className="grid sm:grid-cols-2 gap-8">
-                                {study.businessImpacts ? study.businessImpacts.map((impact, i) => (
-                                    <div key={i} className={`p-8 rounded-3xl border ${i % 2 === 0 ? 'bg-emerald-50 border-emerald-100' : 'bg-indigo-50 border-indigo-100'}`}>
-                                        <div className={`text-4xl font-black mb-2 ${i % 2 === 0 ? 'text-emerald-600' : 'text-indigo-600'}`}>{impact.stat}</div>
-                                        <div className="text-sm font-bold text-slate-900 uppercase tracking-tight">{impact.label}</div>
-                                        <p className="text-xs text-slate-500 mt-2">{impact.subtext}</p>
-                                    </div>
-                                )) : (
-                                    <>
-                                        <div className="p-8 bg-emerald-50 rounded-3xl border border-emerald-100">
-                                            <div className="text-4xl font-black text-emerald-600 mb-2">100%</div>
-                                            <div className="text-sm font-bold text-slate-900 uppercase tracking-tight">Data Reconciliation</div>
-                                            <p className="text-xs text-slate-500 mt-2">Zero difference between analytics and backend logs.</p>
+                            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 mb-12">
+                                <div className="space-y-6">
+                                    {study.impacts.map((impact, i) => (
+                                        <div key={i} className="flex gap-4 items-center text-base font-bold text-slate-700">
+                                            <div className="w-2 h-2 bg-indigo-600 rounded-full flex-shrink-0"></div>
+                                            <span>{impact}</span>
                                         </div>
-                                        <div className="p-8 bg-indigo-50 rounded-3xl border border-indigo-100">
-                                            <div className="text-4xl font-black text-indigo-600 mb-2">ROI+</div>
-                                            <div className="text-sm font-bold text-slate-900 uppercase tracking-tight">Strategy Clarity</div>
-                                            <p className="text-xs text-slate-500 mt-2">Marketing spend redirected to high-performing cohorts.</p>
-                                        </div>
-                                    </>
-                                )}
+                                    ))}
+                                </div>
                             </div>
 
                             {study.testimonial && (
-                                <div className="mt-12 p-8 bg-slate-900 rounded-[2rem] text-white">
-                                    <p className="text-lg italic font-medium leading-relaxed mb-6">
+                                <div className="mt-12 p-10 bg-slate-900 rounded-[2rem] text-white shadow-xl relative overflow-hidden">
+                                    <div className="absolute top-0 right-0 p-8 opacity-10">
+                                        <svg width="80" height="80" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
+                                    </div>
+                                    <p className="text-xl italic font-medium leading-relaxed mb-8 relative z-10 text-slate-100">
                                         &quot;{study.testimonial.text}&quot;
                                     </p>
-                                    <div className="text-sm font-bold text-slate-400">
+                                    <div className="text-sm font-black text-indigo-400 uppercase tracking-widest relative z-10">
                                         — {study.testimonial.author}
                                     </div>
                                 </div>
@@ -173,23 +176,13 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
 
                     {/* Sidebar */}
                     <div className="lg:col-span-5 space-y-12">
-                        <div className="p-12 bg-slate-50 rounded-[3rem] sticky top-32">
-                            <h4 className="text-lg font-bold text-slate-900 mb-8">Implementation Summary</h4>
-                            <div className="space-y-6 mb-12">
-                                {(study.implementationSummary || [
-                                    "Blueprint & Schema Design",
-                                    "Server-Side Tagging Deployment",
-                                    "BigQuery Data Pipeline",
-                                    "Automated QA & Monitoring"
-                                ]).map((item, i) => (
-                                    <div key={i} className="flex gap-4 items-center text-sm font-bold text-slate-700">
-                                        <CheckCircle2 size={18} className="text-indigo-600" />
-                                        {item}
-                                    </div>
-                                ))}
-                            </div>
+                        <div className="p-12 bg-slate-50 rounded-[3rem] sticky top-32 border border-slate-100">
+                            <h4 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">Ready for similar results?</h4>
+                            <p className="text-slate-500 font-medium mb-8 leading-relaxed">
+                                Let's audit your current analytics stack and identify hidden revenue opportunities.
+                            </p>
                             <Link href="/contact" className="block">
-                                <Button variant="primary" className="w-full h-16">Request Similar Audit</Button>
+                                <Button variant="primary" className="w-full h-16 shadow-lg shadow-indigo-600/20">Request an Audit</Button>
                             </Link>
                         </div>
                     </div>
