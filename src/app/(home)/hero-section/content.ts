@@ -4,18 +4,18 @@ import { BarChart, Shield, Lock } from 'lucide-react';
 export const heroContent = {
   badge: {
     icon: BarChart,
-    text: "Advanced Attribution & Measurement"
+    text: "MarTechRise — Empowering Businesses"
   },
   title: {
-    main: "Turn Digital Data Into",
-    highlight: "Business Decisions."
+    main: "Fix Broken Tracking &",
+    highlight: "Unlock Accurate Data"
   },
-  subtitle: "We empower enterprises to navigate the complexity of modern attribution. By merging technical precision with strategic clarity, we transform fragmented data into your most valuable growth asset.",
+  subtitle: "We help brands eliminate data loss, fix tracking issues, and improve attribution so you can scale your marketing campaigns with confidence.",
   ctas: [
     { text: "Request Infrastructure Audit", variant: "primary" as const, href: "/contact" },
     { text: "View Solutions", variant: "outline" as const, href: "/services" }
   ],
-  dashboardImage: "/assets/1.png",
+  dashboardImage: "/assets/home-dasboard.png",
   floatingIndicators: [
     { title: "100% Validated", subtitle: "Data Pipeline", icon: Shield, color: "emerald" },
     { title: "Compliance Ready", subtitle: "GDPR/CCPA", icon: Lock, color: "indigo" }

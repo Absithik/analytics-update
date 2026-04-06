@@ -3,12 +3,14 @@ import AboutHero from './sections/about-hero';
 import WhoWeAre from './sections/who-we-are';
 import WhyWeExist from './sections/why-we-exist';
 import ExpertiseTools from './sections/expertise-tools';
+import CertifiedExpertise from './sections/certified-expertise';
 import Philosophy from './sections/philosophy';
 import Trust from './sections/trust';
 import FAQ from '@/components/common/FAQ';
 import { ABOUT_FAQ } from '@/constants';
 import AboutCta from './sections/about-cta';
 import Schema from '@/components/common/Schema';
+import LogoCarousel from './sections/logo-carousel';
 
 export const metadata: Metadata = {
     title: "Enterprise Digital Analytics Experts | MarTechRise.ai",
@@ -21,8 +23,10 @@ export default function AboutPage() {
             <Schema faqs={ABOUT_FAQ} />
             <AboutHero />
             <WhoWeAre />
-            <WhyWeExist />
-            <ExpertiseTools />
+            {/* <WhyWeExist />
+            <ExpertiseTools /> */}
+            <CertifiedExpertise />
+            <LogoCarousel />
             <Philosophy />
             <Trust />
 

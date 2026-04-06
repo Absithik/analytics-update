@@ -1,39 +1,33 @@
-import { Metadata } from 'next';
-import ModernSaaSHero from './(home)/modern-saas-hero';
-import AuditCtaSection from './(home)/audit-cta-section';
-import StrategicValueSection from './(home)/strategic-value-section';
-import ServicesSnapshotSection from './(home)/services-snapshot-section';
-import AnalyticsProcessSection from './(home)/analytics-process-section';
-import TestimonialSection from './(home)/testimonial-section';
-import IndustriesSection from './(home)/industries-section';
-import MetricsSection from './(home)/metrics-section';
-import FAQSection from './(home)/faq-section';
-import NavigationStrip from './(home)/navigation-strip';
-import Schema from '@/components/common/Schema';
-import { HOME_FAQ } from '@/constants';
 
-export const metadata: Metadata = {
-  title: "Enterprise Digital Analytics Experts | US & Global Data Strategy | MarTechRise.ai",
-  description: "Unlock true ROI with our custom GA4 migrations, server-side tracking, and advanced digital analytics infrastructure built for global enterprises.",
-};
+import LogoCarousel from "@/components/sections/home/logo-carousel";
+import Problems from "@/components/sections/home/problems";
+import Services from "@/components/sections/home/services";
+import CaseStudies from "@/components/sections/home/case-studies";
+import Trust from "@/components/sections/home/trust";
+import Tools from "@/components/sections/home/tools";
+import Process from "@/components/sections/home/process";
+import Testimonials from "@/components/sections/home/testimonials";
+import About from "@/components/sections/home/About";
+import LandingCTA from "@/components/sections/home/landing-cta";
+import HeroSection from "./(home)/hero-section";
+import TestimonialSection from "./(home)/testimonial-section";
 
 export default function Home() {
   return (
-    <>
-      <Schema faqs={HOME_FAQ} />
-      <div className="w-full bg-white">
-        <ModernSaaSHero />
-        {/* <AuditCtaSection /> */}
-        <StrategicValueSection />
-        <ServicesSnapshotSection />
-        <AnalyticsProcessSection />
-
-        <IndustriesSection />
-        <MetricsSection />
-        <TestimonialSection />
-        <FAQSection />
-        <NavigationStrip />
-      </div>
-    </>
+    <main className="bg-white min-h-screen text-slate-900 font-sans">
+      <HeroSection />
+      {/* <LandingHero /> */}
+      <LogoCarousel />
+      <Problems />
+      <Services />
+      <CaseStudies />
+      <Trust />
+      <Tools />
+      <Process />
+      <TestimonialSection />
+      {/* <Testimonials /> */}
+      <About />
+      <LandingCTA />
+    </main>
   );
 }

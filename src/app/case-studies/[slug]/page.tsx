@@ -102,7 +102,7 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
                             <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
                                 <AlertCircle className="text-rose-500" /> Business Challenge
                             </h3>
-                            <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10">
+                            <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10 whitespace-pre-wrap">
                                 {study.businessChallenge}
                             </p>
                         </section>
@@ -137,7 +137,7 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
                             <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
                                 <TrendingUp className="text-emerald-600" /> Outcome
                             </h3>
-                            <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10">
+                            <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10 whitespace-pre-wrap">
                                 {study.outcome}
                             </p>
                         </section>

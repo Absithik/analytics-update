@@ -89,33 +89,39 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
                                 {post.content}
                             </p>
 
-                            <h3 className="text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">The Technical Bottleneck</h3>
-                            <p className="text-lg text-slate-600 leading-relaxed mb-8 font-medium">
-                                In the modern privacy landscape, client-side tracking is increasingly unreliable. Browser protections and ad blockers frequently truncate data packets, leading to attribution gaps of up to 40% in some retail environments.
-                            </p>
+                            {(post as any).fullBody ? (
+                                (post as any).fullBody
+                            ) : (
+                                <>
+                                    <h3 className="text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">The Technical Bottleneck</h3>
+                                    <p className="text-lg text-slate-600 leading-relaxed mb-8 font-medium">
+                                        In the modern privacy landscape, client-side tracking is increasingly unreliable. Browser protections and ad blockers frequently truncate data packets, leading to attribution gaps of up to 40% in some retail environments.
+                                    </p>
 
-                            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 my-12">
-                                <h4 className="text-sm font-black text-slate-900 uppercase tracking-widest mb-6 flex items-center gap-2">
-                                    <Zap size={16} className="text-indigo-600" /> Key Strategic Takeaways
-                                </h4>
-                                <ul className="space-y-4 m-0 p-0 list-none">
-                                    {[
-                                        "Server-side tagging is mandatory for data sovereignty.",
-                                        "First-party data collection is the only resilient strategy for 2025.",
-                                        "Technical measurement audits should occur quarterly, not annually."
-                                    ].map((item, i) => (
-                                        <li key={i} className="flex gap-4 items-start text-slate-700 font-bold text-sm">
-                                            <CheckCircle2 size={18} className="text-emerald-500 flex-shrink-0" />
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                                    <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 my-12">
+                                        <h4 className="text-sm font-black text-slate-900 uppercase tracking-widest mb-6 flex items-center gap-2">
+                                            <Zap size={16} className="text-indigo-600" /> Key Strategic Takeaways
+                                        </h4>
+                                        <ul className="space-y-4 m-0 p-0 list-none">
+                                            {[
+                                                "Server-side tagging is mandatory for data sovereignty.",
+                                                "First-party data collection is the only resilient strategy for 2025.",
+                                                "Technical measurement audits should occur quarterly, not annually."
+                                            ].map((item, i) => (
+                                                <li key={i} className="flex gap-4 items-start text-slate-700 font-bold text-sm">
+                                                    <CheckCircle2 size={18} className="text-emerald-500 flex-shrink-0" />
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
 
-                            <h3 className="text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">Architectural Solutions</h3>
-                            <p className="text-lg text-slate-600 leading-relaxed mb-8 font-medium">
-                                Moving tracking logic to a centralized server allows for PII redaction, data enrichment, and improved page load performance. By controlling the stream, enterprises can ensure that only compliant, cleaned data reaches downstream vendors like Google and Facebook.
-                            </p>
+                                    <h3 className="text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">Architectural Solutions</h3>
+                                    <p className="text-lg text-slate-600 leading-relaxed mb-8 font-medium">
+                                        Moving tracking logic to a centralized server allows for PII redaction, data enrichment, and improved page load performance. By controlling the stream, enterprises can ensure that only compliant, cleaned data reaches downstream vendors like Google and Facebook.
+                                    </p>
+                                </>
+                            )}
                         </div>
 
                         <div className="mt-20 pt-10 border-t border-slate-100 flex items-center justify-between">
