@@ -6,10 +6,17 @@ import Image from 'next/image';
 import { marqueeVariants } from './animations';
 
 const imageLogos = [
-    { src: '/assets/logo-carousel/Adobe-logo.png', alt: 'Adobe' },
-    { src: '/assets/logo-carousel/Google-Analytics-Logo.png', alt: 'Google Analytics' },
-    { src: '/assets/logo-carousel/tealium-logo.png', alt: 'Tealium' },
-    { src: '/assets/logo-carousel/PowerBI.webp', alt: 'Power BI' },
+
+    { src: "/assets/logo-carousel/1.png", alt: "Logo 1" },
+    { src: "/assets/logo-carousel/2.png", alt: "Logo 2" },
+    { src: "/assets/logo-carousel/3.png", alt: "Logo 3" },
+    { src: "/assets/logo-carousel/4.png", alt: "Logo 4" },
+    { src: "/assets/logo-carousel/5.png", alt: "Logo 5" },
+    { src: "/assets/logo-carousel/6.png", alt: "Logo 6" },
+    { src: "/assets/logo-carousel/7.png", alt: "Logo 7" },
+    { src: "/assets/logo-carousel/8.png", alt: "Logo 8" },
+    { src: "/assets/logo-carousel/9.png", alt: "Logo 9" },
+    { src: "/assets/logo-carousel/10.png", alt: "Logo 10" },
 ];
 
 // Repeat logos to span wide screens without gaps
