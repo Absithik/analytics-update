@@ -20,7 +20,7 @@ export default function ServicesPage() {
       <Hero />
       {/* <DeliverSection /> */}
       <ServicesGrid />
-      <Features />
+      {/* <Features /> */}
       <Deliverables />
       <Audience />
       <Scenarios />

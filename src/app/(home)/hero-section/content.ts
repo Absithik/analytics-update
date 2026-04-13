@@ -15,7 +15,7 @@ export const heroContent = {
     { text: "Request Infrastructure Audit", variant: "primary" as const, href: "/contact" },
     { text: "View Solutions", variant: "outline" as const, href: "/services" }
   ],
-  dashboardImage: "/assets/home-dasboard.png",
+  dashboardImage: "/assets/1.png",
   floatingIndicators: [
     { title: "100% Validated", subtitle: "Data Pipeline", icon: Shield, color: "emerald" },
     { title: "Compliance Ready", subtitle: "GDPR/CCPA", icon: Lock, color: "indigo" }

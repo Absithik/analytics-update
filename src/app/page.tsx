@@ -1,4 +1,3 @@
-
 import LogoCarousel from "@/components/sections/home/logo-carousel";
 import Problems from "@/components/sections/home/problems";
 import Services from "@/components/sections/home/services";
@@ -14,7 +13,7 @@ import TestimonialSection from "./(home)/testimonial-section";
 
 export default function Home() {
   return (
-    <main className="bg-white min-h-screen text-slate-900 font-sans">
+    <div className="bg-white min-h-screen text-slate-900 font-sans">
       <HeroSection />
       {/* <LandingHero /> */}
       <LogoCarousel />
@@ -28,6 +27,6 @@ export default function Home() {
       {/* <Testimonials /> */}
       <About />
       <LandingCTA />
-    </main>
+    </div>
   );
 }

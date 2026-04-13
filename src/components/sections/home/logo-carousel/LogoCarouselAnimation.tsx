@@ -11,7 +11,7 @@ interface Props {
 export default function LogoCarouselAnimation({ children, className = "" }: Props) {
   return (
     <motion.div
-      animate={{ x: [0, -1000] }}
+      animate={{ x: ["0%", "-50%"] }}
       transition={{ duration: 30, ease: "linear", repeat: Infinity }}
       className={className}
     >

@@ -59,12 +59,12 @@ const HeroSection: React.FC = () => {
                     {...heroAnimations.dashboard}
                     className="mt-10 relative max-w-6xl mx-auto"
                 >
-                    <div className="aspect-[21/9] rounded-2xl overflow-hidden border border-slate-200 shadow-2xl relative">
+                    <div className="aspect-[16/8] rounded-2xl overflow-hidden border border-slate-200 shadow-2xl relative">
                         <Image
                             src={heroContent.dashboardImage}
                             alt="Analytical Dashboard"
                             fill
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-contain object-center"
                         />
                         {/* <div className="absolute inset-0 bg-slate-900/5"></div> */}
                     </div>

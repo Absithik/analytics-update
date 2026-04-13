@@ -4,7 +4,7 @@ import { glossaryContent } from './content';
 
 const BlogGlossary: React.FC = () => {
     return (
-        <section className="mt-40 border-t border-slate-100 pt-32">
+        <section className="container mx-auto mt-20 border-t border-slate-100 pt-32">
             <div className="grid lg:grid-cols-2 gap-20">
                 <div>
                     <h2 className="text-4xl font-black text-slate-900 mb-12 tracking-tighter">

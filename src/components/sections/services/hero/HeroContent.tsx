@@ -35,12 +35,12 @@ export default function HeroContent() {
 
         {/* Visual Illustration */}
         <HeroAnimation type="graphic-main" className="relative hidden lg:block">
-          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-indigo-500/20 border border-slate-200">
+          <div className="relative w-full aspect-[5/4] rounded-2xl overflow-hidden shadow-2xl shadow-indigo-500/20 border border-slate-200">
             <Image
-              src="/assets/service-desboard.png"
+              src="/assets/SERVICE PAGE_images/1.png"
               alt="Analytics Services Dashboard"
               fill
-              className="object-contain object-top"
+              className="object-cover object-top"
               priority
             />
           </div>

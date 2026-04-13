@@ -11,28 +11,38 @@ interface Props {
 }
 
 export default function LogoCarouselContent({ logos }: Props) {
-  return (
-    <section className="bg-slate-50 py-12 border-y border-slate-200 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 relative">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-50 to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-50 to-transparent z-10" />
+  // Double the logos for a perfectly seamless '50%' translation loop
+  const doubledLogos = [...logos, ...logos];
 
-        <div className="flex whitespace-nowrap">
-          <LogoCarouselAnimation className="flex gap-16 items-center">
-            {[...logos, ...logos, ...logos].map((logo, i) => (
-              <div
-                key={i}
-                className="relative h-20 w-32 cursor-default"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.name}
-                  className="object-contain"
-                  sizes="(max-width: 768px) 100px, 150px"
-                />
-              </div>
-            ))}
-          </LogoCarouselAnimation>
+  return (
+    <section className="bg-transparent py-6 -mt-10 mb-20 relative z-20 overflow-hidden px-4">
+      <div className="max-w-[1100px] mx-auto">
+
+        {/* Soft Glass Pill Container */}
+        <div className="bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-[2rem] py-5 px-2 relative overflow-hidden flex items-center">
+
+          {/* Fading Edges to hide logos as they enter/exit */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white/90 to-transparent z-10 rounded-l-[2rem]" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white/90 to-transparent z-10 rounded-r-[2rem]" />
+
+          {/* Marquee Wrapper */}
+          <div className="flex w-full overflow-hidden">
+            <LogoCarouselAnimation className="flex gap-20 items-center shrink-0 w-max px-10">
+              {doubledLogos.map((logo, i) => (
+                <div
+                  key={i}
+                  className="relative h-20 w-28 md:h-22 md:w-40 shrink-0 flex items-center justify-center  cursor-default"
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+              ))}
+            </LogoCarouselAnimation>
+          </div>
+
         </div>
       </div>
     </section>

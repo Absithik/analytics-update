@@ -13,7 +13,7 @@ export default function FeaturesContent({ features }: Props) {
   return (
     <section className="py-24 bg-slate-50 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-indigo-100/50 blur-[120px] rounded-full pointer-events-none" />
-      
+
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
         <FeaturesAnimation type="header" className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">

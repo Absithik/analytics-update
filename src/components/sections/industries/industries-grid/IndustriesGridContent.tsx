@@ -1,4 +1,5 @@
 import { ShoppingCart, Landmark, Stethoscope, Plane, Shield, Database } from "lucide-react";
+import Image from "next/image";
 import IndustriesGridAnimation from "./IndustriesGridAnimation";
 
 export interface IndustryData {
@@ -7,6 +8,7 @@ export interface IndustryData {
   tagline: string;
   cases: string[];
   impact: string;
+  imageSrc?: string;
 }
 
 interface Props {
@@ -39,12 +41,26 @@ export default function IndustriesGridContent({ industries }: Props) {
                 key={index}
                 type="card"
                 index={index}
-                className="group bg-white rounded-2xl p-8 border border-slate-200 hover:border-indigo-300 transition-all duration-300 hover:scale-[1.02] shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 flex flex-col"
+                className="group bg-white rounded-2xl p-6 md:p-8 border border-slate-200 hover:border-indigo-300 transition-all duration-300 hover:scale-[1.02] shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 flex flex-col overflow-hidden"
               >
-                <div className="w-14 h-14 rounded-xl bg-indigo-50 flex items-center justify-center mb-6 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                  <IconComponent className="w-7 h-7" />
+                {ind.imageSrc && (
+                  <div className="relative w-full h-48 mb-6 rounded-xl overflow-hidden bg-slate-50 flex-shrink-0">
+                    <Image
+                      src={ind.imageSrc}
+                      alt={ind.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
+                
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors shrink-0">
+                    <IconComponent className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">{ind.title}</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">{ind.title}</h3>
+                
                 <p className="text-indigo-600 font-medium text-sm mb-6 pb-4 border-b border-slate-100">{ind.tagline}</p>
                 
                 <div className="flex-1">

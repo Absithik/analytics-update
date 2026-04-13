@@ -52,14 +52,14 @@ const BlogList: React.FC = () => {
             {/* Featured Post Area */}
             {(activeCat === 'All' && !searchQuery && featuredBlog) ? (
                 <div className="mb-24">
-                    <Link href={`/blog/${featuredBlog.slug}`} className="group grid lg:grid-cols-2 gap-12 items-center p-8 md:p-12 bg-slate-50 rounded-[3rem] border border-slate-100 hover:border-indigo-600 transition-all">
+                    <Link href={`/blog/${featuredBlog.slug}`} className="group grid lg:grid-cols-2 gap-12 items-center p-8 md:p-12 bg-slate-50 rounded-[1rem] border border-slate-100 hover:border-indigo-600 transition-all">
                         <div className="aspect-[16/10] rounded-[2rem] overflow-hidden relative">
                             <Image
                                 src={featuredBlog.image}
                                 alt={featuredBlog.title}
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 50vw"
-                                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                className="object-cover transition-all duration-700"
                             />
                         </div>
                         <div>
@@ -97,7 +97,7 @@ const BlogList: React.FC = () => {
                                     alt={blog.title}
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    className="object-cover transition-all duration-700"
                                 />
                             </Link>
                             <div className="flex items-center gap-3 mb-4">

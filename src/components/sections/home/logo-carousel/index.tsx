@@ -19,4 +19,5 @@ const logos: LogoData[] = [
 
 export default function LogoCarouselSection() {
   return <LogoCarouselContent logos={logos} />;
+
 }
