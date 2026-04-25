@@ -35,8 +35,8 @@ const LogoCarousel: React.FC = () => {
                 animate="animate"
             >
                 {renderedLogos.map((logo, i) => (
-                    <div key={`original-${i}`} className="mx-16 shrink-0  duration-300">
-                        <Image src={logo.src} alt={logo.alt} width={160} height={80} className="object-contain w-auto h-20" />
+                    <div key={`original-${i}`} className="mx-16 shrink-0  duration-500">
+                        <Image src={logo.src} alt={logo.alt} width={160} height={100} className="object-contain w-auto h-30" />
                     </div>
                 ))}
             </motion.div>
@@ -46,7 +46,7 @@ const LogoCarousel: React.FC = () => {
                 animate="animate"
             >
                 {renderedLogos.map((logo, i) => (
-                    <div key={`dup-${i}`} className="mx-16 shrink-0  duration-300">
+                    <div key={`dup-${i}`} className="mx-16 shrink-0  duration-500">
                         <Image src={logo.src} alt={logo.alt} width={160} height={80} className="object-contain w-auto h-20" />
                     </div>
                 ))}

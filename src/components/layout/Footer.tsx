@@ -33,10 +33,10 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="text-sm font-bold uppercase tracking-widest mb-6">Solutions</h4>
                         <div className="flex flex-col gap-4 text-slate-400">
-                            <Link href="/services/digital-analytics" className="hover:text-white transition-colors">Digital Analytics</Link>
-                            <Link href="/services/data-strategy" className="hover:text-white transition-colors">Data Strategy</Link>
-                            <Link href="/services/bi-visualization" className="hover:text-white transition-colors">BI Visualization</Link>
-                            <Link href="/services/optimization" className="hover:text-white transition-colors">Conversion Opt.</Link>
+                            <Link href="/case-studies/ecommerce-roas-tracking-fix" className="hover:text-white transition-colors">Digital Analytics</Link>
+                            <Link href="/case-studies/fintech-attribution-qualified-leads" className="hover:text-white transition-colors">Data Strategy</Link>
+                            <Link href="/case-studies/life-sciences-real-time-patient-tracking" className="hover:text-white transition-colors">BI Visualization</Link>
+                            <Link href="/case-studies/travel-adobe-experience-platform-bookings" className="hover:text-white transition-colors">Conversion Opt.</Link>
                         </div>
                     </div>
 

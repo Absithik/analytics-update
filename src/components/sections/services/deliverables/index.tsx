@@ -4,17 +4,17 @@ const approachCards = [
   {
     title: "Structured Framework",
     description: "Follows a defined framework",
-    image: "/assets/SERVICE PAGE_images/9.png" // Since the repo has 25 to 30.png
+    image: "/assets/SERVICE PAGE_images/19.png" // Since the repo has 25 to 30.png
   },
   {
     title: "System Building",
     description: "Reliable, scalable data systems",
-    image: "/assets/SERVICE PAGE_images/10.png"
+    image: "/assets/SERVICE PAGE_images/18.png"
   },
   {
     title: "Accuracy & Precision",
     description: "Tracking aligned with actual KPIs",
-    image: "/assets/SERVICE PAGE_images/11.png"
+    image: "/assets/SERVICE PAGE_images/17.png"
   }
 ];
 

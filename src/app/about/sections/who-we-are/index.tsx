@@ -7,7 +7,7 @@ const WhoWeAre: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                     <div>
-                        <h2 className="text-3xl font-bold text-slate-900 mb-6 uppercase tracking-widest text-sm">{whoWeAreContent.badge}</h2>
+                        <h2 className="font-bold text-slate-900 mb-6 uppercase tracking-widest text-sm">{whoWeAreContent.badge}</h2>
                         <h3 className="text-4xl font-bold text-slate-900 mb-8 leading-tight">{whoWeAreContent.title}</h3>
                         <p className="text-slate-600 text-lg leading-relaxed mb-6">
                             {whoWeAreContent.description1}

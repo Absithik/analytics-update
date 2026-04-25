@@ -19,11 +19,11 @@ export default function CTAIndustriesContent() {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12 relative z-10">
-            <Link href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base font-bold text-indigo-900 hover:bg-slate-50 transition-all hover:scale-105 shadow-xl w-full sm:w-auto">
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base font-bold text-indigo-900 hover:bg-slate-50 transition-all hover:scale-105 shadow-xl w-full sm:w-auto">
               Get a Custom Solution Plan
               <ArrowRight className="h-5 w-5" />
             </Link>
-            <Link href="#audit" className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white hover:bg-white/20 transition-all hover:scale-105 backdrop-blur-md w-full sm:w-auto">
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 border border-white/20 px-8 py-4 text-base font-bold text-white hover:bg-white/20 transition-all hover:scale-105 backdrop-blur-md w-full sm:w-auto">
               Book Free Analytics Audit
               <Calendar className="h-5 w-5" />
             </Link>

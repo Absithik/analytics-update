@@ -22,13 +22,13 @@ export default function IntegrationsContent({ categories }: Props) {
           </p>
         </IntegrationsAnimation>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
           {categories.map((cat, i) => (
             <IntegrationsAnimation
               key={i}
               type="card"
               index={i}
-              className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 text-center hover:shadow-md transition-shadow"
+              className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 text-center hover:shadow-md transition-shadow w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
             >
               <h3 className="text-xl font-semibold text-slate-900 mb-2">{cat.name}</h3>
               <p className="text-indigo-600">{cat.tools}</p>

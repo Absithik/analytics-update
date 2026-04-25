@@ -73,7 +73,7 @@ const ContactPageClient: React.FC = () => {
                         <form className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Full Name</label>
+                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Name</label>
                                     <input
                                         type="text"
                                         placeholder="John Doe"
@@ -81,42 +81,89 @@ const ContactPageClient: React.FC = () => {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Company</label>
+                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Email Address</label>
                                     <input
-                                        type="text"
-                                        placeholder="Enterprize Inc."
+                                        type="email"
+                                        placeholder="john@company.com"
                                         className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900 placeholder:text-slate-300"
                                     />
                                 </div>
                             </div>
-                            <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Work Email</label>
-                                <input
-                                    type="email"
-                                    placeholder="john@company.com"
-                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900 placeholder:text-slate-300"
-                                />
+                            
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Company Name</label>
+                                    <input
+                                        type="text"
+                                        placeholder="Enterprise Inc."
+                                        className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900 placeholder:text-slate-300"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Website URL</label>
+                                    <input
+                                        type="url"
+                                        placeholder="https://example.com"
+                                        className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900 placeholder:text-slate-300"
+                                    />
+                                </div>
                             </div>
+
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Monthly Traffic</label>
+                                    <select defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900">
+                                        <option value="" disabled>Select Traffic</option>
+                                        <option>&lt;10K</option>
+                                        <option>10K–50K</option>
+                                        <option>50K–100K</option>
+                                        <option>100K+</option>
+                                    </select>
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Project Type</label>
+                                    <select defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900">
+                                        <option value="" disabled>Select Project Type</option>
+                                        <option>One-time project</option>
+                                        <option>Ongoing support</option>
+                                        <option>Not sure</option>
+                                    </select>
+                                </div>
+                            </div>
+
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Budget Range</label>
-                                <select className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900">
-                                    <option>$5k - $10k</option>
-                                    <option>$10k - $25k</option>
-                                    <option>$25k+</option>
-                                    <option>Corporate Contract</option>
+                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">What services are you interested in?</label>
+                                <select defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900">
+                                    <option value="" disabled>Select a Service</option>
+                                    <option>GA4 Setup</option>
+                                    <option>Server-side Tracking</option>
+                                    <option>Adobe Setup</option>
+                                    <option>Data Layer</option>
+                                    <option>Data Validation</option>
+                                    <option>Not Sure</option>
                                 </select>
                             </div>
+
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Project Details</label>
+                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Describe your requirement (Optional)</label>
                                 <textarea
-                                    rows={6}
+                                    rows={4}
                                     placeholder="Tell us about your measurement challenges..."
                                     className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900 placeholder:text-slate-300"
                                 />
                             </div>
+
                             <Button variant="primary" className="w-full h-16 text-lg font-black tracking-widest flex items-center justify-center gap-3">
-                                DEPLOY MESSAGE <Send size={18} />
+                                Get Expert Consultation <Send size={18} />
                             </Button>
+
+                            <div className="pt-4 flex flex-col md:flex-row gap-4 items-center justify-center text-sm font-bold text-slate-600">
+                                <span className="flex items-center gap-2"><span className="text-green-500">✔</span> 100+ analytics implementations</span>
+                                <span className="hidden md:block text-slate-300">•</span>
+                                <span className="flex items-center gap-2"><span className="text-green-500">✔</span> Experience with GA4, GTM, Adobe</span>
+                                <span className="hidden md:block text-slate-300">•</span>
+                                <span className="flex items-center gap-2"><span className="text-green-500">✔</span> Trusted by startups & enterprises</span>
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -17,13 +17,13 @@ export default function TrustContent({ reasons }: Props) {
           </h2>
         </TrustAnimation>
 
-        <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto text-left">
+        <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto text-left">
           {reasons.map((reason, i) => (
             <TrustAnimation
               key={i}
               type="card"
               index={i}
-              className="flex items-center gap-4 bg-white border border-slate-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="flex items-center gap-4 bg-white border border-slate-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow w-full sm:w-[calc(50%-0.5rem)]"
             >
               <div className="w-8 h-8 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0">
                  <Check className="w-4 h-4" />

@@ -31,7 +31,7 @@ export default function LogoCarouselContent({ logos }: Props) {
               {doubledLogos.map((logo, i) => (
                 <div
                   key={i}
-                  className="relative h-20 w-28 md:h-22 md:w-40 shrink-0 flex items-center justify-center  cursor-default"
+                  className="relative h-20 w-28 md:h-32 md:w-40 shrink-0 flex items-center justify-center  cursor-default"
                 >
                   <img
                     src={logo.src}

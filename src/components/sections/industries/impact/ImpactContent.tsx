@@ -21,7 +21,7 @@ export default function ImpactContent({ highlights }: Props) {
               Proven Results Across Different Business Models
             </h2>
           </div>
-          <Link href="#contact" className="inline-flex items-center gap-2 text-indigo-600 hover:text-slate-900 transition-colors font-semibold py-2">
+          <Link href="/case-studies" className="inline-flex items-center gap-2 text-indigo-600 hover:text-slate-900 transition-colors font-semibold py-2">
              See Case Studies <ArrowRight className="w-4 h-4" />
           </Link>
         </ImpactAnimation>
