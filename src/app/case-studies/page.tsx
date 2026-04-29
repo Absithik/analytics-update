@@ -28,7 +28,7 @@ export default function CaseStudiesPage() {
                         Our framework is repeatable across verticals. Let&apos;s apply our attribution models to your specific marketing mix.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Link href="/contact">
+                        <Link href="/audit">
                             <Button variant="primary" className="h-16 px-12 text-lg font-bold">Request Strategy Audit</Button>
                         </Link>
                         <Link href="/services">

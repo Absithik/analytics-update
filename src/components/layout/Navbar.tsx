@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
                 </div>
 
                 <div className="hidden lg:flex items-center gap-4">
-                    <Button variant="primary" href="/audit" className="h-11 px-6 text-sm">Get an Audit</Button>
+                    <Button variant="primary" href="/audit" className="h-11 px-6 text-sm">Get a Free Audit</Button>
                 </div>
 
                 <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-slate-900 p-2">
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
                                     </Link>
                                 </div>
                             ))}
-                            <Button variant="primary" href="/contact" onClick={() => setIsOpen(false)} className="w-full h-14">Get Started</Button>
+                            <Button variant="primary" href="/audit" onClick={() => setIsOpen(false)} className="w-full h-14">Get a Free Audit</Button>
                         </div>
                     </motion.div>
                 )}

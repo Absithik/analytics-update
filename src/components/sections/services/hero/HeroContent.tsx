@@ -26,8 +26,8 @@ export default function HeroContent() {
             From strategy to execution, we design and implement robust analytics systems that give you complete visibility into your customer journey and marketing performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Link href="/contact" className="group relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-all hover:shadow-indigo-500/50 hover:scale-105">
-              Get a Custom Solution Plan
+            <Link href="/audit" className="group relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-all hover:shadow-indigo-500/50 hover:scale-105">
+              Book Free Analytics Audit
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>

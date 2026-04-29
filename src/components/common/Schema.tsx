@@ -33,6 +33,5 @@ export default function Schema({ faqs }: SchemaProps) {
         );
     }
 
-    // Default fallback (though layout.tsx handles Organization explicitly)
-    return null;
+    // Default fallback (though layout.tsx handles Organization explicitly)    
 }

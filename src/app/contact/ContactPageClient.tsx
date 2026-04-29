@@ -35,8 +35,8 @@ const ContactPageClient: React.FC = () => {
                                             <Mail className="text-indigo-600" size={20} />
                                         </div>
                                         <div>
-                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Email Strategy</p>
-                                            <p className="text-lg font-bold text-slate-900">hello@martechrise.ai</p>
+                                            <p className="text-[15px] font-black text-slate-900 uppercase tracking-widest mb-1">Email Strategy</p>
+                                            <p className="text-lg font-bold text-slate-400">hello@martechrise.ai</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-6 group">
@@ -44,8 +44,8 @@ const ContactPageClient: React.FC = () => {
                                             <Phone className="text-indigo-600" size={20} />
                                         </div>
                                         <div>
-                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Direct Line</p>
-                                            <p className="text-lg font-bold text-slate-900">+1 (555) 012-3456</p>
+                                            <p className="text-[15px] font-black text-slate-900 uppercase tracking-widest mb-1">Direct Line</p>
+                                            <p className="text-lg font-bold text-slate-400">+91-6382915027</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-6 group">
@@ -53,8 +53,8 @@ const ContactPageClient: React.FC = () => {
                                             <MapPin className="text-indigo-600" size={20} />
                                         </div>
                                         <div>
-                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Headquarters</p>
-                                            <p className="text-lg font-bold text-slate-900">Remote-First | San Francisco, CA</p>
+                                            <p className="text-[15px] font-black text-slate-900 uppercase tracking-widest mb-1">Headquarters</p>
+                                            <p className="text-lg font-bold text-slate-400">Chennai, India</p>
                                         </div>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@ const ContactPageClient: React.FC = () => {
                         <form className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Name</label>
+                                    <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Name</label>
                                     <input
                                         type="text"
                                         placeholder="John Doe"
@@ -81,18 +81,18 @@ const ContactPageClient: React.FC = () => {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Email Address</label>
+                                    <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Email Address</label>
                                     <input
                                         type="email"
                                         placeholder="john@company.com"
-                                        className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900 placeholder:text-slate-300"
+                                        className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-400 placeholder:text-slate-300"
                                     />
                                 </div>
                             </div>
-                            
+
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Company Name</label>
+                                    <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Company Name</label>
                                     <input
                                         type="text"
                                         placeholder="Enterprise Inc."
@@ -100,7 +100,7 @@ const ContactPageClient: React.FC = () => {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Website URL</label>
+                                    <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Website URL</label>
                                     <input
                                         type="url"
                                         placeholder="https://example.com"
@@ -111,8 +111,8 @@ const ContactPageClient: React.FC = () => {
 
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Monthly Traffic</label>
-                                    <select defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900">
+                                    <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Monthly Traffic</label>
+                                    <select defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-400">
                                         <option value="" disabled>Select Traffic</option>
                                         <option>&lt;10K</option>
                                         <option>10K–50K</option>
@@ -121,8 +121,8 @@ const ContactPageClient: React.FC = () => {
                                     </select>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Project Type</label>
-                                    <select defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900">
+                                    <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Project Type</label>
+                                    <select defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-400">
                                         <option value="" disabled>Select Project Type</option>
                                         <option>One-time project</option>
                                         <option>Ongoing support</option>
@@ -132,8 +132,8 @@ const ContactPageClient: React.FC = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">What services are you interested in?</label>
-                                <select defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900">
+                                <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">What services are you interested in?</label>
+                                <select defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-400">
                                     <option value="" disabled>Select a Service</option>
                                     <option>GA4 Setup</option>
                                     <option>Server-side Tracking</option>
@@ -145,11 +145,11 @@ const ContactPageClient: React.FC = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Describe your requirement (Optional)</label>
+                                <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Describe your requirement (Optional)</label>
                                 <textarea
                                     rows={4}
                                     placeholder="Tell us about your measurement challenges..."
-                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900 placeholder:text-slate-300"
+                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-400"
                                 />
                             </div>
 

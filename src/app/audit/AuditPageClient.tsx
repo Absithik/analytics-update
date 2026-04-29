@@ -54,7 +54,7 @@ const AuditPageClient: React.FC = () => {
                         <form onSubmit={handleSubmit} className="space-y-8">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Name</label>
+                                    <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Name</label>
                                     <input
                                         type="text"
                                         required
@@ -63,7 +63,7 @@ const AuditPageClient: React.FC = () => {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Email Address</label>
+                                    <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Email Address</label>
                                     <input
                                         type="email"
                                         required
@@ -74,7 +74,7 @@ const AuditPageClient: React.FC = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Website URL</label>
+                                <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Website URL</label>
                                 <input
                                     type="url"
                                     required
@@ -85,9 +85,9 @@ const AuditPageClient: React.FC = () => {
 
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Monthly Traffic</label>
+                                    <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Monthly Traffic</label>
                                     <div className="relative">
-                                        <select required defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900 appearance-none">
+                                        <select required defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-400 appearance-none">
                                             <option value="" disabled>Select Traffic</option>
                                             <option>&lt;10K</option>
                                             <option>10K–50K</option>
@@ -100,9 +100,9 @@ const AuditPageClient: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">What do you need help with?</label>
+                                    <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">What do you need help with?</label>
                                     <div className="relative">
-                                        <select required defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-900 appearance-none">
+                                        <select required defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-600 transition-all font-bold text-slate-400 appearance-none">
                                             <option value="" disabled>Select an Issue</option>
                                             <option>Tracking Issues</option>
                                             <option>Data Accuracy Problems</option>
@@ -119,7 +119,7 @@ const AuditPageClient: React.FC = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Project Details (Optional)</label>
+                                <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Project Details (Optional)</label>
                                 <textarea
                                     rows={3}
                                     placeholder="Tell us a little bit about your project..."
@@ -128,7 +128,7 @@ const AuditPageClient: React.FC = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Biggest Challenge (Optional)</label>
+                                <label className="text-[15px] font-black text-slate-900 uppercase tracking-widest ml-1">Biggest Challenge (Optional)</label>
                                 <textarea
                                     rows={3}
                                     placeholder="What is your immediate, biggest analytics challenge?"

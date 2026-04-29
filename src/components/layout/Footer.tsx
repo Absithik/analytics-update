@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Globe, Linkedin, Twitter, Github } from 'lucide-react';
+import { Globe, Linkedin, Twitter, Github, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
     return (
@@ -17,8 +17,24 @@ const Footer: React.FC = () => {
                         <p className="text-slate-400 leading-relaxed mb-6">
                             Technical analytics architects for the modern enterprise. We build clean data pipelines that drive growth.
                         </p>
+                        
+                        <div className="flex flex-col gap-4 mb-8">
+                            <a href="tel:+916382915027" className="flex items-center gap-3 text-slate-400 hover:text-indigo-400 transition-colors group">
+                                <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-indigo-600/20 transition-all">
+                                    <Phone size={18} className="text-indigo-400" />
+                                </div>
+                                <span className="text-sm font-medium tracking-wide">+91-6382915027</span>
+                            </a>
+                            <div className="flex items-center gap-3 text-slate-400">
+                                <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
+                                    <MapPin size={18} className="text-indigo-400" />
+                                </div>
+                                <span className="text-sm font-medium tracking-wide">Chennai, India</span>
+                            </div>
+                        </div>
+
                         <div className="flex items-center gap-4">
-                            <span className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-slate-400 cursor-default">
+                            <span className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-slate-400 cursor-default hover:bg-indigo-600/20 hover:text-indigo-400 transition-all">
                                 <Linkedin size={18} />
                             </span>
                             <span className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-slate-400 cursor-default">
