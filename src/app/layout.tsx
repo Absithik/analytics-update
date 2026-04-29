@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import FloatingContact from "@/components/layout/FloatingContact";
 import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/common/StructuredData";
 
@@ -121,6 +122,7 @@ export default function RootLayout({
           </a>
         </div>
 
+        <FloatingContact />
         <Footer />
       </body>
     </html>
