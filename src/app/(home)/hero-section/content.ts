@@ -12,7 +12,7 @@ export const heroContent = {
   },
   subtitle: "We help brands eliminate data loss, fix tracking issues, and improve attribution so you can scale your marketing campaigns with confidence.",
   ctas: [
-    { text: "Book Free Analytics Audit", variant: "primary" as const, href: "/audits" },
+    { text: "Book Free Analytics Audit", variant: "primary" as const, href: "/audit" },
     // { text: "View Solutions", variant: "outline" as const, href: "/services" }
   ],
   dashboardImage: "/assets/1.png",
